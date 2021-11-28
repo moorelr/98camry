@@ -1,12 +1,19 @@
 # Import data from text file
-gas_data <- read.csv("gas.txt", stringsAsFactors = FALSE, strip.white = TRUE)
+gas_data <- read.csv("gas.csv", stringsAsFactors = FALSE, strip.white = TRUE)
 
-pdf("Gas summary.pdf", width = 8.5, height = 5.5, useDingbats = FALSE)
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 2) + 0.1)
+saving <- TRUE
+if(saving){
+  pdf("Gas summary.pdf", width = 8.5, height = 5.5, useDingbats = FALSE)
+  par(mfrow = c(2, 2), mar = c(4, 4, 2, 2) + 0.1)
+}
 
 # Calculate cumulative volume and add as column in dataframe
 cumulative_volume <- gas_data$Volume[1]
 for(i in 2:nrow(gas_data)){
+  if(is.na(gas_data$Volume[i])){
+      cumulative_volume[i] <- cumulative_volume[i-1]
+      next
+    }
   cumulative_volume[i] <- cumulative_volume[i-1] + gas_data$Volume[i]
 }
 gas_data <- cbind(gas_data, cumulative_volume)
@@ -21,7 +28,7 @@ points(gas_data$Date, gas_data$Price, pch = 21, bg = "gray", cex = 2)
 text(gas_data$Date[1], 1.8, adj = c(0, 0), cex = 0.8
      , labels = "Fuel consumption data for '98 Toyota Camry")
 text(gas_data$Date[1], 1.65, adj = c(0, 0), cex = 0.8
-     , labels = "Gas purchased in Christiansburg, VA")
+     , labels = "Gas purchased mostly in Christiansburg, VA")
 
 # All of this is moot because of the oil price crash...
 if(FALSE){
@@ -58,31 +65,55 @@ new_gas <- data.frame(
                  , length.out = 30)
   )
 gas_predict <- predict(object = linear_model, newdata = new_gas, interval = "p", level = 0.95)
-lines(new_gas$cumulative_volume, gas_predict[,2], lty = 2, col = "red")
-lines(new_gas$cumulative_volume, gas_predict[,3], lty = 2, col = "red")
+#lines(new_gas$cumulative_volume, gas_predict[,2], lty = 2, col = "red")
+#lines(new_gas$cumulative_volume, gas_predict[,3], lty = 2, col = "red")
 
 # MPG plot
 mpg <- numeric(0)
 for(i in 2:nrow(gas_data)){
-  mpg[i] <- (gas_data$Odometer[i] - gas_data$Odometer[i-1])/gas_data$Volume[i-1]
+  mpg[i] <- (gas_data$Odometer[i] - gas_data$Odometer[i-1])/gas_data$Volume[i]
 }
+mpg_mean <- round(mean(mpg, na.rm = TRUE, lty = 3), 2)
+mpg_median <- round(median(mpg, na.rm = TRUE), 2)
+
 plot(gas_data$Date, mpg, type = "n", lty = 2
      , xlab = "Date, 2019-2020", ylab = "MPG")
 points(gas_data$Date, mpg, pch = 21, bg = "gray", cex = 2)
+abline(h = mpg_mean, col = "blue")
+abline(h = mpg_median, lty = 2, col = "blue")
 
 # MPG histogram
 hist(mpg, main = "", xlab = "MPG")
 mpg_dens <- density(mpg, na.rm = TRUE)
 lines(mpg_dens$x, mpg_dens$y*14/max(mpg_dens$y), col = "red")
 
-mpg_mean <- round(mean(mpg, na.rm = TRUE, lty = 3), 2)
 abline(v = mpg_mean, col = "blue")
 text(30, 14, adj = c(0, 1), labels = paste("Mean =", mpg_mean), col = "blue")
 
-mpg_median <- round(median(mpg, na.rm = TRUE), 2)
 abline(v = mpg_median, lty = 2, col = "blue")
 text(30, 12, adj = c(0, 1), labels = paste("Median =", mpg_median), col = "blue")
 
-par(mfrow = c(1, 1), mar = c(5, 4, 4, 2) + 0.1)
-dev.off()
+# Oil
+if(!saving){
+  flag <- which(!is.na(gas_data$Oil))
+  plot(gas_data$Date[flag], gas_data$Oil[flag], type = "l", lty = 2
+       #, xlab = "Date, 2019-2020", ylab = "MPG"
+       )
+}
+
+# Tire pressure
+if(!saving){
+  flag <- which(!is.na(gas_data$P_fd))
+  plot(gas_data$Date[flag], gas_data$P_rd[flag], type = "l", lty = 2, col = "red"
+       #, xlab = "Date, 2019-2020", ylab = "MPG"
+  )
+  lines(gas_data$Date[flag], gas_data$P_fd[flag], lty = 2, col = "black")
+  gas_data$Date[flag][1]
+  # Looks like tires need to be refilled about once every two months
+}
+
+if(saving){
+  par(mfrow = c(1, 1), mar = c(5, 4, 4, 2) + 0.1)
+  dev.off()
+}
 
