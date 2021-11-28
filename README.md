@@ -11,3 +11,5 @@ Rev. 11/28/2021
 - deleted outnated/unused .txt and .xls versions of dataset
 - Cleaned up some typos in the dataset
 
+Bugs remaining:
+- Date axis is wrong on figure panels because there's now data going into 2021
