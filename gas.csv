@@ -132,3 +132,53 @@ NA,193555,13.766,3.299,34,34,35,20,0.35,regular to full at Speedway
 230116,205533,14.227,3.299,32,32,33,22,0.25,regular to full at speedway in christiansburg
 230125,205800,13.381,3.469,30,32,32,19,0.25,regular to full at kroger in christiansburg VA
 230204,206065,13.596,3.499,31,31,31,28,0.2,regular to full at joco mart
+230215,206315,13.266,3.399,32,32,32,32,NA,regular -> full at jocomart; tires overinflated to ~40 psi so I let the air out until 32 psi. Very warm today; start of 6/7/2024 data entry
+230226,206549,12.381,3.399,31,31,32,31,1,regular -> full at Duckin4 (Exxon by Rte 1); oil color light gold
+230303,206900,14.805,3.199,31,30,31,30,0.95,regular -> full @ Speedway on S. main st.
+230315,207151,13.467,3.259,33,32,31,32,1,regular -> full at jocomart
+230324,207411,13.427,3.099,30,32,32,33,NA,regular -> full at gucci kroger
+230330,207729,13.464,3.359,32,34,32,33,0.75,regular -> full @ joco mart
+230411,207891,13.445,3.559,32,34,34,34,NA,regular -> full @ jocomart
+230420,208421,13.238,3.529,32,34,34,34,0.6,regular -> full @ jocomart
+230501,208515,14.091,3.879,29,30,30,30,0.75,trying higher-grade plus/extra fuel; O89 -> full @ jocomart
+230510,208816,14.440,3.859,31,32,33,33,0.7,O89 -> full @ jocomart
+230524,209122,13.915,3.529,38,37,37,38,0.5,O89 -> full @ Gucci kroger
+230622,209402,12.814,3.399,36,35,35,36,0.6,regular -> full @ jocomart
+230706,209867,13.904,3.389,38,36,36,38,0.5,O89 -> full @ baby kroger
+230716,209950,12.854,3.999,37,37,36,37,NA,O89 -> full @ Exxon on Rte 8 in Christiansburg, VA
+230721,210292,15.003,3.699,36,36,36,36,0.4,O89 -> full @ Gucci kroger
+230730,210586,12.930,3.829,37,37,37,38,0.25,O89 -> full @ gucci kroger
+230807,210850,13.169,3.799,37,36,36,37,0.33,O87 -> full @ Jocomart
+230812,211212,14.772,3.799,35,35,34,34,NA,O89 -> full @ christiansburg kroger
+230819,211485,13.345,4.199,35,35,34,34,0.25,O89 -> full @ Rte 8 exxon in C'burg
+230823,211836,13.790,3.849,35,35,35,36,0.25,O89 -> full @ c'burg kroger
+230901,212116,14.275,4.199,35,35,34,36,0.5,O89 -> full @ Exxon on Rte 8 in C’burg. Put 1/2 qt of oil in yesterday.
+230909,212801,15.348,3.629,NA,NA,NA,NA,NA,regular -> full at S. Main Speedway in B’burg
+230926,213063,13.365,3.594,33,33,32,32,0.7,Regular -> full @ JocoMart
+231013,213338,13.900,3.599,NA,NA,NA,NA,0.6,regular -> full at JocoMart
+231027,213609,13.305,3.399,NA,NA,NA,NA,0.5,coolant stains/deposits on top of reservoir and level over the “max” line…?; O87 -> full @ Speedway in Blacksburg
+231114,213865,13.036,3.299,30,29,29,29,0.5,O87 -> full @ JocoMart
+231118,214181,13.369,3.199,33,32,32,33,0.25,regular -> full @ Exxon near CLT; added 1/2 quart of mobil full synthetic oil
+231206,214498,14.545,3.099,29,28,28,28,0.7,O87 -> full at baby kroger
+231215,214782,14.997,3.099,30,30,29,30,0.6,O87 -> full @ Speedway on S. main in Blacksburg
+231223,214963,10.323,3.099,NA,NA,NA,NA,NA,Regular -> full @ Exxon on Rte 8 in Christiansburg
+231231,215268,13.453,2.899,29,28,28,29,0.4,NA
+240108,215555,13.621,2.839,30,30,29,30,0.6,Regular -> full @ Kroger on UCB. Oil was at ~80-90% when car had been in the Perry St. garage parked for ~3 hours.
+240121,215797,13.608,2.819,27,27,26,27,0.4,Regular -> full @ C'burg kroger
+240128,216090,13.255,2.959,28,27,26,27,0.2,Regular -> full at Sheetz on 533 Univ. Bvd. in H’burg
+240205,216375,13.576,3.099,30,29,28,30,0.75,Regular -> full @ JocoMart
+240214,216634,14.119,3.259,29,28,26,28,0.6,Regular -> full @ Baby Kroger in Blacksburg
+240227,216874,13.027,3.299,30,30,28,30,0.5,Reg. -> full @ Joco Mart
+240303,217099,9.771,3.249,30,30,30,31,0.45,Regular -> full @ Exxon on Rte 220 N of Hot Springs, VA
+240304,217378,11.006,3.299,30,30,29,30,0.2,regular -> full @ Sheetz in Staunton VA
+240313,217697,14.690,3.149,28,28,27,28,0.6,O89 -> full @ Baby Kroger in Blacksburg VA
+240321,217916,11.415,3.069,NA,NA,NA,NA,NA,Regular -> full @ Kroger 402 in Blacksburg VA (Kaysha)
+240329,218202,14.651,3.499,30,30,29,30,0.4,Regular -> full @ Joco Mart
+240402,218512,13.145,2.899,32,31,30,31,0.3,Regular -> full at gucci kroger
+240411,218784,13.656,3.099,NA,NA,NA,NA,0.2,Regular -> full @ S. Main Kroger in Blacksburg VA; can't find Jonny's pressure gauge...?
+240419,219045,13.437,3.499,33,34,36,34,0.75,Regular -> full @ joco Mart; new pressure gauge; very clear oil color
+240427,219300,12.359,3.599,30,31,33,31,0.45,NA
+240507,219608,14.952,2.999,32,32,34,31,0.5,Regular -> full @ Gucci Kroger in Blacksburg VA
+240524,219956,12.540,3.599,NA,NA,NA,NA,NA,Regular -> full at around mile 280 at Sheetz on I-81 N. of Harrisonburg VA
+240530,220263,13.272,3.499,31,31,34,32,0,Regular -> full @ joco mart; oil level below fill mark
+240602,220577,8.335,3.599,NA,NA,NA,NA,NA,Paid in cash at Exxon on Rte 8 in C'burg; Bought $30 worth of gas and did not fill up all the way because I had to break a $100 bill; end of 6/7/2024 data entry
